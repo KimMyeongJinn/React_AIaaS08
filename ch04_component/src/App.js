@@ -15,7 +15,8 @@ import "./App.css";
 // import Team from "./ex13_composition_component/Team";
 // import Comment from "./ex18_extraction_component/Comment";
 // import CommentList from "./ex19_comment_list/CommentList";
-import CommentList from "./ex20_comment_list/CommentList";
+// import CommentList from "./ex20_comment_list/CommentList";
+import CommentList from "./ex21_comment_list/CommentList";
 
 function App() {
   // return <Child />;
