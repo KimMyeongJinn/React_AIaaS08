@@ -4,7 +4,9 @@ import "./App.css";
 // import MyComponent from "./ex03_props/MyComponent";
 // import MyComponent from "./ex06_props/MyComponent";
 // import MyComponent from "./ex07_props/MyComponent";
-import MyComponent from "./ex08_destructing/MyComponent";
+// import MyComponent from "./ex08_destructing/MyComponent";
+// import MyComponent from "./ex09_prop_types/MyComponent";
+import MyComponent from "./ex10_prop_required/MyComponent";
 // import Library from "./ex04_props/Library";
 // import Child from "./ex01_function/Child";
 // import Child from "./ex02_class/Child";
@@ -48,10 +50,29 @@ function App() {
   );
   */
 
+  /*
   return (
     <>
       <MyComponent name="리액트">React Programming</MyComponent>
       <MyComponent name="React, Vue">Component 제작</MyComponent>
+    </>
+  );
+  */
+  /*
+  return (
+    <>
+      <MyComponent name={10}>React Programming</MyComponent>
+      <MyComponent name="React, Vue">Component 제작</MyComponent>
+    </>
+  );
+*/
+  return (
+    <>
+      <MyComponent favoriteNumber={10} />
+      <MyComponent name="리액트">React Programming</MyComponent>
+      <MyComponent name="React, Vue" favoriteNumber={3}>
+        Component 제작
+      </MyComponent>
     </>
   );
 }
