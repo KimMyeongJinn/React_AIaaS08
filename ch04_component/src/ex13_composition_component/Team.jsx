@@ -1,6 +1,6 @@
 import Student from "./Student";
 
-// 컴포넌트 합성
+// [컴포넌트 합성]
 // Bottom-Up
 // 기본 컴포넌트 먼저 생성 -> 상위 컴포넌트 조립
 
