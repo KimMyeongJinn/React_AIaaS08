@@ -30,7 +30,10 @@ function Counter() {
       <h1>{number}</h1>
       <button
         onClick={() => {
-          setNumber(number + 1);
+          // 1) number에 1을 증가시킨다.
+          // 2) React 엔진이 Hook를 걸어놓고 있다가 state 변화 감지
+          // 3) Counter컴포넌트는 재 렌더링이 일어난다.
+          setNumber(number + 1); // 리액트가 감지한다.
         }}
       >
         ++
