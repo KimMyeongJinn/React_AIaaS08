@@ -6,10 +6,13 @@ import "./App.css";
 // import MyComponent from "./ex07_props/MyComponent";
 // import MyComponent from "./ex08_destructing/MyComponent";
 // import MyComponent from "./ex09_prop_types/MyComponent";
-import MyComponent from "./ex10_prop_required/MyComponent";
+// import MyComponent from "./ex10_prop_required/MyComponent";
+// import MyComponent from "./ex11_prop_class/MyComponent";
+// import MyComponent from "./ex12_prop_class/MyComponent";
 // import Library from "./ex04_props/Library";
 // import Child from "./ex01_function/Child";
 // import Child from "./ex02_class/Child";
+import Team from "./ex13_composition_component/Team";
 
 function App() {
   // return <Child />;
@@ -66,6 +69,7 @@ function App() {
     </>
   );
 */
+  /*
   return (
     <>
       <MyComponent favoriteNumber={10} />
@@ -75,6 +79,25 @@ function App() {
       </MyComponent>
     </>
   );
+  */
+
+  /*
+  return (
+    <>
+      <MyComponent name="js" favoriteNumber={10}>
+        javascript
+      </MyComponent>
+      <MyComponent name="리액트" favoriteNumber={7}>
+        React Programming
+      </MyComponent>
+      <MyComponent name="React, Vue" favoriteNumber={3}>
+        Component 제작
+      </MyComponent>
+    </>
+  );
+  */
+
+  return <Team title="재능 기부 교류 서비스" />;
 }
 
 export default App;
