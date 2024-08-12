@@ -11,7 +11,7 @@ function Avatar(props) {
 function UserInfo(props) {
   return (
     <div className="user-info">
-      <Avatar user={props.author} />
+      <Avatar author={props.author} />
       <div className="user-info-name">{props.author.name}</div>
     </div>
   );
