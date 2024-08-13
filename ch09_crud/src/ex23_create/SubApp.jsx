@@ -1,0 +1,171 @@
+import { useState } from "react";
+
+function Header(props) {
+  return (
+    <header>
+      <h1>
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault(); // <a>태그의 기능을 정지
+
+            // props로 전달된 함수를 호출하도록 한다.
+            props.onChangeMode();
+          }}
+        >
+          {props.title}
+        </a>
+      </h1>
+    </header>
+  );
+}
+
+function Nav(props) {
+  // props로부터 받은 topics를 가공해서 <li>요소로 만들어서 lis에 저장할 예정임.
+  //const lis = props.topics.map((topic) => <li>{topic.title}</li>);
+
+  const lis = [];
+  for (let i = 0; i < props.topics.length; i++) {
+    let t = props.topics[i];
+    lis.push(
+      <li key={t.id}>
+        <a
+          id={t.id}
+          href={"/read/" + t.id}
+          onClick={(e) => {
+            e.preventDefault();
+            /*
+            e.target.id는 string 형인데
+            <SubApp>에서 비교하려면 Number타입과 비교해야 한다.
+            그래서 매개변수를 전달할 때 string -> Number로 변환해서 전달한다.
+            */
+            props.onChangeMode(Number(e.target.id));
+          }}
+        >
+          {t.title}
+        </a>
+      </li>
+    );
+  }
+
+  return (
+    <nav>
+      <ol>{lis}</ol>
+    </nav>
+  );
+}
+
+function Article(props) {
+  return (
+    <article>
+      <h1>{props.title}</h1>
+      {props.body}
+    </article>
+  );
+}
+
+function Create(props) {
+  return (
+    <article>
+      <h2>Create</h2>
+      <form
+        onSubmit={(e) => {
+          //alert("submit");
+          e.preventDefault(); // 기본동작(page reloading 막음)
+          const title = e.target.title.value;
+          const body = e.target.body.value;
+
+          props.onCreate(title, body);
+        }}
+      >
+        <p>
+          <input type="text" name="title" placeholder="title" />
+        </p>
+        <p>
+          <textarea name="body" placeholder="body"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Create" />
+        </p>
+      </form>
+    </article>
+  );
+}
+
+function SubApp() {
+  const [mode, setMode] = useState("WELCOME");
+  const [id, setId] = useState(null);
+
+  // topics값이 변할 때 화면에 변화가 적용되야 하므로 useState로 전환
+  const [topics, setTopics] = useState([
+    { id: 1, title: "html", body: "html is ..." },
+    { id: 2, title: "css", body: "css is ..." },
+    { id: 3, title: "javascript", body: "javascript is ..." },
+  ]);
+
+  let content = null;
+
+  if (mode === "WELCOME") {
+    content = <Article title="Welcome" body="Hello, Web" />;
+  } else if (mode === "READ") {
+    let title = null;
+    let body = null;
+    for (let i = 0; i < topics.length; i++) {
+      if (id === topics[i].id) {
+        title = topics[i].title;
+        body = topics[i].body;
+        break;
+      }
+    }
+
+    content = <Article title={title} body={body} />;
+  } else if (mode === "CREATE") {
+    content = (
+      <Create
+        onCreate={(_title, _body) => {
+          // alert(_title, _body);
+
+          /* topics는 현재 기존 객체를 가리키는 참조값에 의해 관리되고 있다.
+             아래는 기존 객체에 새로운 정보를 추가했기 때문에
+             topics의 내용은 변경되었지만, 참조값이 바뀐 것은 아니다.
+             그러므로 React엔진은 참조값이 동일하므로 변경되었다고 판단하지 않는다.
+             => Re-Rendeing이 일어나지 않는다.
+          */
+          const newTopic = { title: _title, body: _body }; // 새 항목 생성
+          topics.push(newTopic); // 기존 리스트에 새 항목 추가
+          setTopics(topics); // 기존 리스트 다시 저장
+        }}
+      />
+    );
+  }
+
+  return (
+    <div>
+      <Header
+        title="WEB"
+        onChangeMode={() => {
+          setMode("WELCOME");
+        }}
+      />
+      <Nav
+        topics={topics}
+        onChangeMode={(id) => {
+          setMode("READ");
+          setId(id);
+        }}
+      />
+      {content}
+      <a
+        href="/create"
+        onClick={(e) => {
+          e.preventDefault();
+          setMode("CREATE");
+        }}
+      >
+        Create
+      </a>
+    </div>
+  );
+}
+
+export default SubApp;

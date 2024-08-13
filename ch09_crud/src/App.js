@@ -15,7 +15,23 @@ import "./App.css";
 // import SubApp from "./ex13_state/SubApp";
 // import SubApp from "./ex14_state/SubApp";
 // import SubApp from "./ex15_state_id/SubApp";
-import SubApp from "./ex16_trans_type_id/SubApp";
+// import SubApp from "./ex16_trans_type_id/SubApp";
+// import SubApp from "./ex17_create/SubApp";
+// import SubApp from "./ex18_create/SubApp";
+// import SubApp from "./ex19_create/SubApp";
+// import SubApp from "./ex20_create/SubApp";
+// import SubApp from "./ex21_create/SubApp";
+// import SubApp from "./ex22_create/SubApp";
+// import SubApp from "./ex23_create/SubApp";
+// import SubApp from "./ex24_create/SubApp";
+// import SubApp from "./ex25_create/SubApp";
+// import SubApp from "./ex26_update/SubApp";
+// import SubApp from "./ex27_update/SubApp";
+// import SubApp from "./ex28_update/SubApp";
+// import SubApp from "./ex29_update/SubApp";
+// import SubApp from "./ex30_update/SubApp";
+// import SubApp from "./ex31_update/SubApp";
+import SubApp from "./ex32_update/SubApp";
 
 function App() {
   return <SubApp />;
