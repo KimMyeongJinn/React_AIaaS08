@@ -31,7 +31,14 @@ import "./App.css";
 // import SubApp from "./ex29_update/SubApp";
 // import SubApp from "./ex30_update/SubApp";
 // import SubApp from "./ex31_update/SubApp";
-import SubApp from "./ex32_update/SubApp";
+// import SubApp from "./ex32_update/SubApp";
+// import SubApp from "./ex33_update/SubApp";
+// import SubApp from "./ex34_update/SubApp";
+// import SubApp from "./ex35_update/SubApp";
+// import SubApp from "./ex36_delete/SubApp";
+// import SubApp from "./ex37_delete/SubApp";
+// import SubApp from "./ex38_divide_component/SubApp";
+import SubApp from "./ex39_divide_component/SubApp";
 
 function App() {
   return <SubApp />;
