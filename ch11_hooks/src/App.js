@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Average from "./ch11_useMemo/Average";
 // import Counter from "./ch01_useState/Counter";
 // import Info from "./ch02_useState/Info";
 // import Info from "./ch03_useEffect/Info";
@@ -9,7 +10,7 @@ import "./App.css";
 // import Info from "./ch07_useEffect/Info";
 // import ParentInfo from "./ch08_useEffect/ParentInfo";
 // import Counter from "./ch09_useReducer/Counter";
-import Info from "./ch10_useReducer/Info";
+// import Info from "./ch10_useReducer/Info";
 
 function App() {
   // return <Counter />;
@@ -20,7 +21,9 @@ function App() {
 
   // return <Counter />;
 
-  return <Info />;
+  // return <Info />;
+
+  return <Average />;
 }
 
 export default App;
