@@ -14,7 +14,9 @@ import "./App.css";
 // import Average from "./ch11_useMemo/Average";
 // import Average from "./ch12_useMemo/Average";
 // import Average from "./ch13_useCallback/Average";
-import Average from "./ch14_useRef/Average";
+// import Average from "./ch14_useRef/Average";
+// import Info from "./ch15_useCustomHook/Info";
+import Spec from "./ch15_useCustomHook/Spec";
 
 function App() {
   // return <Counter />;
@@ -27,7 +29,11 @@ function App() {
 
   // return <Info />;
 
-  return <Average />;
+  // return <Average />;
+
+  // return <Info />;
+
+  return <Spec />;
 }
 
 export default App;
