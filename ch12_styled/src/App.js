@@ -11,6 +11,7 @@ import "./App.css";
 // import PrimaryButton from "./ex08_styled/PrimaryButton";
 import PrimaryButton from "./ex09_styled/PrimaryButton";
 import SecondButton from "./ex09_styled/SecondButton";
+import Blocks from "./ex10_styled/Blocks";
 
 function App() {
   // return <ReactButton>안녕하세요</ReactButton>;
@@ -32,6 +33,7 @@ function App() {
     </>
   );
   */
+  /*
   return (
     <>
       <PrimaryButton primary>사랑합니다</PrimaryButton>
@@ -40,6 +42,8 @@ function App() {
       <SecondButton>Good!</SecondButton>
     </>
   );
+  */
+  return <Blocks />;
 }
 
 export default App;
