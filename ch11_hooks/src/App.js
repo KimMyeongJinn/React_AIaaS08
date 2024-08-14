@@ -13,7 +13,8 @@ import "./App.css";
 // import Info from "./ch10_useReducer/Info";
 // import Average from "./ch11_useMemo/Average";
 // import Average from "./ch12_useMemo/Average";
-import Average from "./ch13_useCallback/Average";
+// import Average from "./ch13_useCallback/Average";
+import Average from "./ch14_useRef/Average";
 
 function App() {
   // return <Counter />;
