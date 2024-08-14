@@ -1,5 +1,6 @@
 import { useReducer } from "react";
 
+//              (기존값, e.target)
 const reducer = (state, action) => {
   return {
     ...state,
