@@ -1,0 +1,17 @@
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  padding: 1rem;
+  display: flex;
+  flex-direction: ${(props) => (props.column ? "column" : "row")};
+  align-items: ${(props) => {
+    if (props.baseline) return "baseline";
+    else if (props.stretch) return "stretch";
+    else return "flex-start";
+  }};
+  justify-content: flex-start;
+  background-color: lightgray;
+  border: 1px solid black;
+`;
+
+export default Wrapper;

@@ -9,9 +9,11 @@ import "./App.css";
 // import PrimaryButton from "./ex06_styled/PrimaryButton";
 // import PrimaryButton from "./ex07_styled/PrimaryButton";
 // import PrimaryButton from "./ex08_styled/PrimaryButton";
-import PrimaryButton from "./ex09_styled/PrimaryButton";
-import SecondButton from "./ex09_styled/SecondButton";
-import Blocks from "./ex10_styled/Blocks";
+// import PrimaryButton from "./ex09_styled/PrimaryButton";
+// import SecondButton from "./ex09_styled/SecondButton";
+// import Blocks from "./ex10_styled/Blocks";
+// import Blocks from "./ex11_styled/Blocks";
+import Blocks from "./ex12_styled/Blocks";
 
 function App() {
   // return <ReactButton>안녕하세요</ReactButton>;
@@ -40,6 +42,19 @@ function App() {
       <PrimaryButton>고맙습니다</PrimaryButton>
       <SecondButton primary>Happy~</SecondButton>
       <SecondButton>Good!</SecondButton>
+    </>
+  );
+  */
+  /*
+  return <Blocks />;
+  */
+  /*
+  return (
+    <>
+      <Blocks />
+      <Blocks column />
+      <Blocks stretch />
+      <Blocks baseline />
     </>
   );
   */
