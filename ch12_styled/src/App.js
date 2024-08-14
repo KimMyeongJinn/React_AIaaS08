@@ -58,7 +58,12 @@ function App() {
     </>
   );
   */
-  return <Blocks />;
+  return (
+    <>
+      <Blocks />
+      <Blocks column />
+    </>
+  );
 }
 
 export default App;
