@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+// import TodoTemplate from "./ex01_TodoTemplate/TodoTemplate";
+// import TodoTemplate from "./ex02_TodoTemplate/TodoTemplate";
+import TodoTemplate from "./ex03_TodoInsert/TodoTemplate";
+import TodoInsert from "./ex03_TodoInsert/TodoInsert";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoTemplate>
+      <TodoInsert />
+      <div>TodoList</div>
+    </TodoTemplate>
   );
 }
 
