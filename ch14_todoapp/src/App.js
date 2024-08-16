@@ -17,9 +17,16 @@ import TodoInsert from "./ex05_TodoList/TodoInsert";
 import TodoList from "./ex05_TodoList/TodoList";
 import { useState } from "react";
 */
+/*
 import TodoTemplate from "./ex06_TodoInsert/TodoTemplate";
 import TodoInsert from "./ex06_TodoInsert/TodoInsert";
 import TodoList from "./ex06_TodoInsert/TodoList";
+import { useState, useRef, useCallback } from "react";
+*/
+
+import TodoTemplate from "./ex07_onInsert/TodoTemplate";
+import TodoInsert from "./ex07_onInsert/TodoInsert";
+import TodoList from "./ex07_onInsert/TodoList";
 import { useState, useRef, useCallback } from "react";
 
 function App() {
