@@ -23,10 +23,15 @@ import TodoInsert from "./ex06_TodoInsert/TodoInsert";
 import TodoList from "./ex06_TodoInsert/TodoList";
 import { useState, useRef, useCallback } from "react";
 */
-
+/*
 import TodoTemplate from "./ex07_onInsert/TodoTemplate";
 import TodoInsert from "./ex07_onInsert/TodoInsert";
 import TodoList from "./ex07_onInsert/TodoList";
+import { useState, useRef, useCallback } from "react";
+*/
+import TodoTemplate from "./ex08_onRemove/TodoTemplate";
+import TodoInsert from "./ex08_onRemove/TodoInsert";
+import TodoList from "./ex08_onRemove/TodoList";
 import { useState, useRef, useCallback } from "react";
 
 function App() {
@@ -75,6 +80,7 @@ function App() {
   */
 
   //ex07_onInsert
+  /*
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -122,6 +128,53 @@ function App() {
     <TodoTemplate>
       <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} />
+    </TodoTemplate>
+  );
+  */
+
+  // ex08_onRemove
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      text: "리액트의 기초 알아보기",
+      checked: true,
+    },
+    {
+      id: 2,
+      text: "컴포넌트 스타일링 해보기",
+      checked: true,
+    },
+    {
+      id: 3,
+      text: "일정 관리 앱 만들어 보기",
+      checked: false,
+    },
+  ]);
+
+  const nextId = useRef(4);
+
+  const onInsert = useCallback(
+    (text) => {
+      const todo = {
+        id: nextId.current,
+        text,
+        checked: false,
+      };
+      setTodos(todos.concat(todo));
+      nextId.current += 1;
+    },
+    [todos]
+  );
+
+  const onRemove = useCallback(
+    (id) => setTodos(todos.filter((todo) => todo.id !== id)),
+    [todos]
+  );
+
+  return (
+    <TodoTemplate>
+      <TodoInsert onInsert={onInsert} />
+      <TodoList todos={todos} onRemove={onRemove} />
     </TodoTemplate>
   );
 }
