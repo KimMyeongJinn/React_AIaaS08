@@ -7,7 +7,8 @@ import "./App.css";
 // import MiniBlogApp from "./ex05_main_page/MiniBlogApp";
 // import MiniBlogApp from "./ex06_post_list/MiniBlogApp";
 // import MiniBlogApp from "./ex07_post_list_item/MiniBlogApp";
-import MiniBlogApp from "./ex08_post_write_page/MiniBlogApp";
+// import MiniBlogApp from "./ex08_post_write_page/MiniBlogApp";
+import MiniBlogApp from "./ex09_post_view_page/MiniBlogApp";
 
 function App() {
   return <MiniBlogApp />;
